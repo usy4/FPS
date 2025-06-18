@@ -77,8 +77,6 @@ class Main extends PluginBase implements Listener
 
         // Check for ScoreHUD
         $this->scoreHudEnabled = $this->getServer()->getPluginManager()->getPlugin("ScoreHud") !== null;
-
-        $this->getLogger()->info(TextFormat::GREEN . "FPS enabled! ScoreHUD: " . ($this->scoreHudEnabled ? "Found" : "Not found"));
     }
 
     public function onDisable(): void
