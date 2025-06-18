@@ -1,0 +1,11 @@
+{
+    "namespace": "general_section",
+    "debugger_toggles_panel": {
+        "bindings": [
+        ]
+    },
+    "diagnostics_toggles_panel": {
+        "bindings": [
+        ]
+    }
+}
