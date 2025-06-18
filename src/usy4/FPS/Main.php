@@ -96,6 +96,8 @@ class Main extends PluginBase implements Listener
 
     private function initializeResourcePack(): void
     {
+        var_dump(self::$pack);
+        var_dump(libCustomPack::generatePackFromResources($this));
         try {
             // Register resource pack generated from plugin resources
             libCustomPack::registerResourcePack(self::$pack = libCustomPack::generatePackFromResources($this));
