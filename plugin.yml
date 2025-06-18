@@ -1,7 +1,7 @@
 name: FPS
 main: usy4\FPS\Main
 version: 2.0.0
-api: [5.0.0]
+api: [5.18.0]
 author: usy4
 description: "Advanced FPS display plugin with customizable UI, multiple display modes, and ScoreHUD integration"
 website: "https://github.com/usy4/FPS"
@@ -17,10 +17,7 @@ permissions:
   fps.command.fps:
     description: "Allows access to FPS settings"
     default: true
-  fps.admin:
-    description: "Administrative permissions for FPS"
-    default: op
 
 softdepend:
   - libCustomPack
-  - ScoreHud
+  - ScoreHud 
