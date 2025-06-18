@@ -13,8 +13,8 @@ A simple FPS display plugin for PocketMine-MP servers.
 ## Requirements
 
 - PocketMine-MP 5.0+
-- FormAPI plugin
-- libCustomPack plugin (optional, for resource pack features)
+- FormAPI plugin (Will automatically download the UI)
+- libCustomPack plugin (Will automatically download for the resource pack)
 - ScoreHud plugin (optional, for scoreboard display)
 
 ## Installation
@@ -48,7 +48,6 @@ A simple FPS display plugin for PocketMine-MP servers.
 | Permission | Default | Description |
 |------------|---------|-------------|
 | `fps.command.fps` | `true` | Use the /fps command |
-| `fps.admin` | `op` | Admin features |
 
 ## ScoreHUD Integration
 
