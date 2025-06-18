@@ -103,8 +103,6 @@ class Main extends PluginBase implements Listener
         } catch (\Exception $e) {
             $this->getLogger()->error("Failed to register resource pack: " . $e->getMessage());
         }
-        var_dump(self::$pack);
-        var_dump(libCustomPack::generatePackFromResources($this));
     }
 
     public function onPlayerJoin(PlayerJoinEvent $event): void
