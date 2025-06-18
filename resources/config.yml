@@ -1,0 +1,159 @@
+# ===========================================
+# FPS Plugin Configuration v2.1.0
+# Advanced FPS Display with Resource Pack Support
+# ===========================================
+
+# Resource Pack Settings
+resource-pack:
+  # Enable/disable resource pack functionality
+  # Plugin will look for pack in: plugins/FPS/pack/ folder
+  enabled: true
+  
+  # Force players to accept the resource pack
+  force: true
+
+# FPS Display Settings
+fps:
+  # Default settings for new players
+  default:
+    enabled: false
+    display_type: "popup"
+    text_color: "§f"
+    colors:
+      high: "§a"     # Green for 60+ FPS
+      medium: "§e"   # Yellow for 30-59 FPS
+      low: "§c"      # Red for <30 FPS
+  
+  # FPS thresholds
+  thresholds:
+    high: 60
+    medium: 30
+
+# ScoreHUD Integration
+scorehud:
+  # Enable ScoreHUD support
+  enabled: true
+  
+  # Tag name for ScoreHUD (use {fps.display} in scoreboards)
+  tag-name: "fps.display"
+  
+  # Hide tag when FPS is disabled
+  hide-when-disabled: true
+
+# Plugin Messages
+messages:
+  fps-enabled: "&a[FPS] &7FPS display enabled!"
+  fps-disabled: "&c[FPS] &7FPS display disabled!"
+  no-permission: "&c[FPS] &7You don't have permission to use this command!"
+  player-only: "&c[FPS] &7This command can only be used by players!"
+  diagnostics-required: "&e[FPS] &7Enable Client Diagnostics in your settings!"
+  
+  setup-instructions:
+    - "&6=== FPS Setup Guide ==="
+    - "&7Follow these steps to enable FPS display:"
+    - "&f1. Open Minecraft Settings"
+    - "&f2. Go to Creator Settings"
+    - "&f3. Enable 'Client Diagnostics'"
+    - "&f4. Use &a/fps &fto configure display"
+    - "&6========================"
+
+# Advanced Features
+advanced:
+  # Debug mode (shows extra info in console)
+  debug: falsece pack
+  force: true
+  
+  # Custom pack options (only used if embedded-pack: false)
+  # Place your .zip file in: plugins/FPS/packs/
+  path: "packs/your_custom_pack.zip"
+  
+  # Or use URL download (leave path empty if using this)
+  url: ""
+  
+  # Player notifications
+  send-message: true
+  message: "&6[FPS] &aLoading custom UI... &7Please accept!"
+  
+  # Pack enforcement
+  must-accept: true
+  kick-message: "&c[FPS] &7You must accept the resource pack to play!"
+  
+  # Pack verification (advanced)
+  check-hash: false
+  hash: ""
+
+# FPS Display Settings
+fps:
+  # Update frequency (in ticks, 20 = 1 second)
+  update-frequency: 10
+  
+  # Default settings for new players
+  default:
+    enabled: false
+    display_type: "popup"
+    text_color: "§f"
+    colors:
+      high: "§a"     # Green for 60+ FPS
+      medium: "§e"   # Yellow for 30-59 FPS
+      low: "§c"      # Red for <30 FPS
+  
+  # FPS thresholds
+  thresholds:
+    high: 60
+    medium: 30
+  
+  # Performance optimization
+  cache-settings: true
+  auto-save-interval: 300  # Save player data every 5 minutes
+
+# ScoreHUD Integration
+scorehud:
+  # Enable ScoreHUD support
+  enabled: true
+  
+  # Tag name for ScoreHUD (use {fps.display} in scoreboards)
+  tag-name: "fps.display"
+  
+  # Hide tag when FPS is disabled
+  hide-when-disabled: true
+
+# Plugin Messages
+messages:
+  fps-enabled: "&a[FPS] &7FPS display enabled!"
+  fps-disabled: "&c[FPS] &7FPS display disabled!"
+  no-permission: "&c[FPS] &7You don't have permission to use this command!"
+  player-only: "&c[FPS] &7This command can only be used by players!"
+  diagnostics-required: "&e[FPS] &7Enable Client Diagnostics in your settings!"
+  
+  setup-instructions:
+    - "&6=== FPS Setup Guide ==="
+    - "&7Follow these steps to enable FPS display:"
+    - "&f1. Open Minecraft Settings"
+    - "&f2. Go to Creator Settings"
+    - "&f3. Enable 'Client Diagnostics'"
+    - "&f4. Use &a/fps &fto configure display"
+    - "&6========================"
+
+# Advanced Features
+advanced:
+  # Debug mode (shows extra info in console)
+  debug: false
+  
+  # Automatic resource pack updates
+  auto-update-pack: false
+  
+  # Backup player data
+  backup-data: true
+  backup-interval: 1440  # minutes (24 hours)
+  
+  # Performance monitoring
+  monitor-performance: true
+  low-fps-warning: 15
+
+# File Paths (relative to plugin data folder)
+paths:
+  player-data: "players.yml"
+  backups: "backups/"
+  packs: "packs/"
+  logs: "logs/"
+  examples: "examples/"

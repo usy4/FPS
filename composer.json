@@ -1,0 +1,18 @@
+{
+    "name": "usy4/fps",
+    "autoload": {
+        "psr-4": {
+            "Usy4\\Fps\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "usy4"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "pocketmine/pocketmine-mp": "^5.0",
+        "jasonw4331/libcustompack": "dev-master"
+    }
+}
