@@ -1,6 +1,14 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/usy4/FPS
 build-by-default: true
-branches:
-- main
-projects: []
+projects:
+  FPS:
+    path: ""
+    icon: "icon.png"
+    excludeDirs:
+      - .github
+    excludeFiles:
+      - .gitignore
+    libs:
+      - src: LatamPMDevs/libCustomPack/libCustomPack
+        version: ^1.0.1
 ...
