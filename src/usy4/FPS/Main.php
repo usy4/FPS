@@ -82,7 +82,7 @@ class Main extends PluginBase implements Listener
     public function onDisable(): void
     {
         $this->savePlayerData();
-        
+
         // Unregister and cleanup resource pack
         if (isset(self::$pack)) {
             libCustomPack::unregisterResourcePack(self::$pack);
@@ -90,14 +90,12 @@ class Main extends PluginBase implements Listener
             @unlink($this->getDataFolder() . self::$pack->getPackName() . '.mcpack');
             $this->getLogger()->debug('Resource pack file deleted');
         }
-        
+
         $this->getLogger()->info(TextFormat::RED . "FPS disabled.");
     }
 
     private function initializeResourcePack(): void
     {
-        var_dump(self::$pack);
-        var_dump(libCustomPack::generatePackFromResources($this));
         try {
             // Register resource pack generated from plugin resources
             libCustomPack::registerResourcePack(self::$pack = libCustomPack::generatePackFromResources($this));
@@ -105,6 +103,8 @@ class Main extends PluginBase implements Listener
         } catch (\Exception $e) {
             $this->getLogger()->error("Failed to register resource pack: " . $e->getMessage());
         }
+        var_dump(self::$pack);
+        var_dump(libCustomPack::generatePackFromResources($this));
     }
 
     public function onPlayerJoin(PlayerJoinEvent $event): void
