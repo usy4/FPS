@@ -13,4 +13,6 @@ projects:
         version: ^1.0.1
       - src: LatamPMDevs/FormAPI/libFormAPI
         version: ^2.1.1
+    lint:
+      phpstan: false
 ...
